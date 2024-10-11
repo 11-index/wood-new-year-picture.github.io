@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绵竹木板年画</title>
+		<link rel="stylesheet" href=" index.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<a href="index.html">非遗木版年画</a>
+		    	<a href="jiajiang.html">四川夹江年画</a>
+				<a href="#jiemian"><img src="绵竹logo.png"/></a>
+			</nav>
+		</header>
+		<div class="video">
+			<video autoplay loop muted>
+			  <source src="mianzhu.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="jiemian" id="jiemian">
+			<div class="news">
+				<h1>新闻</h1>
+				<ul>
+					<li><a href="https://scdfz.org.cn/scyx/scfw/content_8648" target="_blank">首批国家级非物质文化遗产——绵竹木版年画</a></li>
+					<li><a href="https://www.163.com/v/video/VSD2K7DGO.html" target="_blank">灵感中国Inspiration丨绵竹木版年画：在木屑飞舞中，看指尖的彩色世界</a></li>
+					<li><a href="https://new.qq.com/rain/a/20241003A01IH400" target="_blank">国庆不用人挤人！在绵竹，也能“浪”得很文艺！</a></li>
+					<li><a href="https://www.163.com/v/video/VSD2L4TKL.html" target="_blank">灵感中国Inspiration丨绵竹木版年画：在木屑飞舞中</a></li>
+					<li><a href="https://www.sohu.com/a/711747960_121124406" target="_blank">非遗故事 | 绵竹木版年画：一绘一版，传承经典 </a></li>
+					<li><a href="https://www.ihchina.cn/project_details/13910" target="_blank">绵竹木版年画 - 中国非物质文化遗产网</a></li>
+					<li><a href="https://www.ihchina.cn/art/detail/id/11437.html" target="_blank">绵竹年画：千年古邑的艺术奇葩</a></li>
+					<li><a href="https://www.ihchina.cn/Article/Index/detail?id=11565" target="_blank">绵竹年画的非遗传承与发展现状</a></li>
+					<li><a href="https://new.qq.com/rain/a/20220131A03XOO00" target="_blank">金字招牌｜非遗迎春：年之有味 画之祈年——绵竹年画</a></li>
+					<li><a href="https://www.thepaper.cn/newsDetail_forward_2232341" target="_blank">传承者 | 绵竹年画画师陈云福：门上重绘乡土中国的众神图</a></li>
+				</ul>
+			</div>
+			<div class="shipin">
+				<video controls id="myVideo">
+				  <source src="mianzhu.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="text">
+				<hr/>
+				<h1>绵竹木版年画</h1>
+				<h3>绵竹木版年画，四川省德阳市民间传统美术，国家级非物质文化遗产之一、与剑南春酒、赵坡茶并称绵竹三绝。</h3>
+				<h3>绵竹年画以木版刻印、手工彩绘为特色，又称绵竹木版年画。始于宋代盛于明清，内容以吉祥喜庆、民间传说、乡土生活等为主，构图丰富夸张、色彩鲜艳明快，具有鲜明的农耕文化特色。</h3>
+				<a href="https://baike.baidu.com/item/%E7%BB%B5%E7%AB%B9%E6%9C%A8%E7%89%88%E5%B9%B4%E7%94%BB/5409655" target="_blank">了解更多</a>
+			</div>
+		</div>
+		<script>
+		    var video = document.getElementById("myVideo");
+		    var videos = ["mianzhu.mp4", "mianzhu1.mp4", "mianzhu2.mp4", "mianzhu3.mp4"];
+		    var index = 0;
+		
+		    video.addEventListener("ended", function() {
+		        index++;
+		        if (index == videos.length) {
+		            index = 0;
+		        }
+		        video.src = videos[index];
+		        video.play();
+		    });
+		</script>
+	</body>
+</html>
