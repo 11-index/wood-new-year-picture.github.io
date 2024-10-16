@@ -100,7 +100,10 @@ header .navbar img
 	line-height:30px;
 	margin:3px 2px;
 	float:left;
-	overflow:auto;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .news a:hover
@@ -155,4 +158,23 @@ header .navbar img
 hr
 {
 	width: 97vw;
+	size: 2px;
+}
+
+.jiemian span
+{
+	width: 45vw;
+	height: 45vh;
+	float: left;
+	margin: 10px;
+}
+
+.jiemian span a img
+{
+	height: 100%;
+}
+
+.jiemian .right a img
+{
+	float: right;
 }
