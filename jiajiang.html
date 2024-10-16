@@ -1,61 +1,180 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>四川夹江年画</title>
-		<link rel="stylesheet" href=" index.css">
-	</head>
-	<body>
-		<header>
-			<nav class="navbar">
-				<a href="index.html">非遗木版年画</a>
-		    	<a href="mianzhu.html">绵竹木版年画</a>
-				<a href="#jiemian"><img src="夹江logo.png"/></a>
-			</nav>
-		</header>
-		<div class="video">
-			<video autoplay loop muted>
-			  <source src="jiajiang.mp4" type="video/mp4">
-			</video>
-		</div>
-		<div class="jiemian" id="jiemian">
-			<div class="news">
-				<h1>新闻</h1>
-				<ul>
-					<li><a href="https://www.ihchina.cn/project_details/14160/" target="_blank">木版年画（夹江年画）</a></li>
-					<li><a href="https://new.qq.com/rain/a/20231102A08RG500" target="_blank">十年历程，共享旅博 | 人物访谈——夹江年画非遗技艺传承人篇</a></li>
-					<li><a href="https://www.thepaper.cn/newsDetail_forward_21672263" target="_blank">【春节特辑】夹江年画始于古代门神画‖周杰华</a></li>
-					<li><a href="http://www.jiajiang.gov.cn/jjx/fwzwhyc/201902/5fbbce81e042475aa59c9f5c606db55f.shtml" target="_blank">夹江年画纸上的乡关和年味</a></li>
-					<li><a href="https://k.sina.com.cn/article_2125816842_7eb5640a019006u5h.html" target="_blank">身边的非遗| 夹江年画：找回失去的那份乡关和年味儿！</a></li>
-				</ul>
-			</div>
-			<div class="shipin">
-				<video controls id="myVideo">
-				  <source src="jiajiang.mp4" type="video/mp4">
-				</video>
-			</div>
-			<div class="text">
-				<hr/>
-					<h1>夹江木版年画</h1>
-					<h3>木版年画（夹江年画），四川省夹江县传统美术，国家级非物质文化遗产之一。</h3>
-					<h3>夹江年画是四川省夹江县特有的一种民间美术样式，据记载，夹江年画与绵竹年画和梁平年画齐名，为四川三大年画之一，约在明代中叶，夹江县已出现年画作坊，董大兴荣作坊为其中的代表。夹江年画题材丰富，主要内容包括神像、门神、山水花鸟、戏剧故事、神话传说等，也不乏反映民间生活、针砭时弊之作，在众多作品中，“黄丹门神”较受人们的欢迎。夹江年画以木版套色印制，色版少则四套，多则八套，具有色彩艳丽、工艺精湛的特点。</h3>
-					<a href="https://baike.baidu.com/item/%E6%9C%A8%E7%89%88%E5%B9%B4%E7%94%BB%EF%BC%88%E5%A4%B9%E6%B1%9F%E5%B9%B4%E7%94%BB%EF%BC%89/53487837" target="_blank">了解更多</a>
-					<a href="http://jjxnhyjs.com/" target="_blank">夹江年画研究所</a>
-			</div>
-		</div>
-		<script>
-		    var video = document.getElementById("myVideo");
-		    var videos = ["jiajiang.mp4"];
-		    var index = 0;
-		
-		    video.addEventListener("ended", function() {
-		        index++;
-		        if (index == videos.length) {
-		            index = 0;
-		        }
-		        video.src = videos[index];
-		        video.play();
-		    });
-		</script>
-	</body>
-</html>
+body
+{
+	margin: 0px;
+	border: 0px;
+}
+
+header
+{
+    position: fixed;
+    top:0; 
+	right:0;
+    min-height: 100vh;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background:#fff;
+    z-index: 1000;
+	width:80px;
+}
+
+a
+{
+	text-decoration:none;
+	color:rgba(255,255,255,1);
+}
+
+header .navbar
+{
+    writing-mode: vertical-lr;
+    padding:0.5rem;
+}
+
+header .navbar a
+{
+    padding:0.5rem;
+    font-size:28px;
+    color:#222;
+	font-weight:300;
+	font-family:"华文新魏";
+}
+
+header .navbar a:hover
+{
+    color:var(--green);
+}
+
+header .navbar img
+{
+	width: 30px;
+	height: 30px;
+}
+
+.video
+{
+	height: 100vh;
+	width: 99vw;
+	float: left;
+	background-color: black;
+}
+
+.video video
+{
+	height: 99vh;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.jiemian
+{
+	height: 100vh;
+	width: 99vw;
+	float: left;
+	background-color: darksalmon;
+}
+
+.news
+{
+	width:35vw;
+	margin:0 auto;
+	padding:10px;
+	float: left;
+	overflow:auto;
+}
+
+.news ul
+{
+	list-style: none;
+}
+
+.news ul li
+{
+	list-style: none;
+	font-size:18px;
+	width:30vw;
+	border-bottom:1px solid #000000;
+	display:block;
+	height:30px;
+	line-height:30px;
+	margin:3px 2px;
+	float:left;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.news a:hover
+{
+	color:#009999;
+}
+.news li:hover
+{
+	border-left:solid #6C9;
+	border-bottom:solid #6C9;
+	background-color:#CCC;
+}	
+
+.news h1
+{
+	font-family: 华文新魏;
+	text-align: center;
+}
+
+.shipin video
+{
+	width: 50vw;
+	float: left;
+	margin: 40px;
+}
+
+.text
+{
+	width: 90vw;
+	float: left;
+	display: block;
+}
+
+.text h1
+{
+	text-align: center;
+	font-family: 华文新魏;
+}
+
+.text h3
+{
+	font-family: 楷体;
+	margin-left: 60px;
+}
+
+.text a
+{
+	font-family: 楷体;
+	margin-left: 60px;
+}
+
+hr
+{
+	width: 97vw;
+	size: 2px;
+}
+
+.jiemian span
+{
+	width: 45vw;
+	height: 45vh;
+	float: left;
+	margin: 10px;
+}
+
+.jiemian span a img
+{
+	height: 100%;
+}
+
+.jiemian .right a img
+{
+	float: right;
+}
